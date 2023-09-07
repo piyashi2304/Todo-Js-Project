@@ -48,8 +48,6 @@ function addcard(){
     cardHeading.innerText = cardname.value
     cardname.value=""  //clear the popup 
     card.classList.add('card')
-    // addItems.classList.add('additemdeletebtn')
-    // deletebutton.classList.add('additemdeletebtn')
     addItems.innerText = ""
     addItems.setAttribute('class','fa-solid fa-circle-plus')
     deletebutton.innerText = ""
@@ -60,9 +58,6 @@ function addcard(){
         card.remove()
         if(cardcontainer.innerText==='')
        notask.classList.remove('hide')
-    
-
-        
     })
 
 
@@ -112,7 +107,7 @@ function addcard(){
             let itemtext = document.createElement('span')
             itemtext.classList.add('span1')
             let markdone = document.createElement('button')
-            markdone.classList.add('markdonee')
+            markdone.classList.add('markdone')
 
             //append
 

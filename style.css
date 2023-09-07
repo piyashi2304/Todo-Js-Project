@@ -146,8 +146,8 @@ border-radius: 10px;
     margin: 10px;
     /* padding: 20px; */
 }
-.markdonee{
-    background-color: aqua;
+.markdone{
+    background-color: rgb(0, 255, 81);
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
