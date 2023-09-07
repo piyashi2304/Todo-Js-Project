@@ -47,7 +47,7 @@ body{
     
 }
 .box{
-    border: 2px solid rgb(65, 56, 56);
+border: 2px solid rgb(65, 56, 56);
 width: 350px;
 min-height: 200px;
 position: fixed;
@@ -63,7 +63,6 @@ border-radius: 10px;
 .card{
     width: 200px;
     min-height: 300px ;
-    
     background-color: white;
     border-radius: 10px;
 }
@@ -76,10 +75,6 @@ border-radius: 10px;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: space-around;
-   
-    
-    
-    
 }
 #tasknames{
     text-align: center;
@@ -95,6 +90,7 @@ border-radius: 10px;
     border-radius: 10px;
     background-color: rgb(245, 12, 12);
     cursor: pointer;
+    font-size: 25px;
 
 
 }
@@ -131,12 +127,13 @@ border-radius: 10px;
     width: 90%;
     height: 25px;
 }
-.addcloseee{
+.addclose{
     margin: 20px;
     width: 83px;
     height: 37px;
     border-radius: 10px;
     background-color: rgb(255, 0, 0);
+    font-size: 25px;
 }
 #singlecard{
     display: flex;

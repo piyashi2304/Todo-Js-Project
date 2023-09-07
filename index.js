@@ -93,10 +93,10 @@ function addcard(){
         //give values to Element
 
         itemPopupHeading.innerText="Add New Item"
-        addbutton.innerText="add" 
-        closebutton.innerText="close"
-        addbutton.classList.add('addcloseee')
-        closebutton.classList.add('addcloseee')
+        addbutton.innerText="Add" 
+        closebutton.innerText="Close"
+        addbutton.classList.add('addclose')
+        closebutton.classList.add('addclose')
 
         closebutton.addEventListener('click' ,function(){
             Additempoppup.classList.add('hide')
@@ -188,8 +188,8 @@ function addcard(){
             itemPopupHeading.innerText="Add New Item"
             addbutton.innerText="add" 
             closebutton.innerText="close"
-            addbutton.classList.add('addcloseee')
-            closebutton.classList.add('addcloseee')
+            addbutton.classList.add('addclose')
+            closebutton.classList.add('addclose')
     
             closebutton.addEventListener('click' ,function(){
                 Additempoppup.classList.add('hide')
