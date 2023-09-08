@@ -5,6 +5,7 @@ var parent = document.getElementById("Parent")
 var Additempoppup = document.getElementById("Additempoppup")
 var notask = document.getElementById("notask")
 var singlecard = document.getElementById("singlecard")
+var cardNameHead = document.getElementById("task")
 let isSinglecard =false
 // let currentsingelcard = null
 //Add task Button
@@ -138,6 +139,8 @@ function addcard(){
     cardHeading.addEventListener('click', function () {
         cardHeading.style.cursor = "pointer";
         singlecard.classList.remove('hide');
+        cardNameHead.innerText = cardHeading.innerText
+        cardNameHead.classList.remove("hide")
         singlecard.classList.add('allign');
         cardcontainer.classList.add('hide');
 
@@ -203,7 +206,7 @@ function addcard(){
                 let itemtext = document.createElement('span')
                 itemtext.classList.add('span1')
                 let markdone = document.createElement('button')
-                markdone.classList.add('markdonee')
+                markdone.classList.add('markdone')
     
                 //append
     
@@ -229,26 +232,28 @@ function addcard(){
                 
                
     
-                Additempoppup.innerText = ""
-
+                Additempoppup.innerText = ""    
+                itemList.appendChild(item)
+                
                 if (singlecard) {
                     let itemclone = item.cloneNode(true);
-                    copycard.appendChild(itemclone);
+                    let copylist=copycard.querySelector('div')
+                    copylist.appendChild(itemclone);
                 
+                let markdoneClone=itemclone.querySelector('button')
+                  
                  
-                    let markdoneClone = markdone.cloneNode(true);
-                    let itemtexts = itemtext.cloneNode(true)
                     
                    
-                    itemclone.appendChild(itemtexts)
-                    itemclone.appendChild(markdoneClone);
+                    // itemclone.appendChild(itemtexts)
+                    // itemclone.appendChild(markdoneClone);
                   
                     
                 
                     
                     markdoneClone.addEventListener('click', function () {
                        
-                        itemtexts.style.textDecoration = "line-through";
+                        itemclone.firstElementChild.style.textDecoration = "line-through";
                         markdoneClone.classList.add('hide');
                     });
                 }
@@ -263,6 +268,7 @@ function addcard(){
 }
 function back(){
     parent.firstElementChild.classList.add('hide')
+    cardNameHead.classList.remove("hide")
     singlecard.classList.add('hide')
     cardcontainer.classList.remove('hide')
     // cardcontainer.appendChild(singlecard.firstElementChild)
