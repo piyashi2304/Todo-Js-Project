@@ -5,7 +5,8 @@ var parent = document.getElementById("Parent")
 var Additempoppup = document.getElementById("Additempoppup")
 var notask = document.getElementById("notask")
 var singlecard = document.getElementById("singlecard")
-var cardNameHead = document.getElementById("task")
+var cardNameHead  = document.getElementById("task")
+var tophead = document.getElementById("tophead")
 let isSinglecard =false
 // let currentsingelcard = null
 //Add task Button
@@ -139,11 +140,13 @@ function addcard(){
     cardHeading.addEventListener('click', function () {
         cardHeading.style.cursor = "pointer";
         singlecard.classList.remove('hide');
-        cardNameHead.innerText = cardHeading.innerText
-        cardNameHead.classList.remove("hide")
+        //cardNameHead.innerText = cardHeading.innerText
+        cardNameHead.classList.add("hide")
         singlecard.classList.add('allign');
         cardcontainer.classList.add('hide');
-
+        tophead.classList.remove('hide')
+        tophead.innerText = cardHeading.innerText
+        
 
         //create a copy of the card
         let copycard = card.cloneNode(true);
@@ -263,11 +266,14 @@ function addcard(){
                 
             })
         parent.firstElementChild.classList.remove('hide')
+       
     })
 
 }
 function back(){
     parent.firstElementChild.classList.add('hide')
+    tophead.classList.add("hide")
+    // cardNameHead.classList.add("hide")
     cardNameHead.classList.remove("hide")
     singlecard.classList.add('hide')
     cardcontainer.classList.remove('hide')

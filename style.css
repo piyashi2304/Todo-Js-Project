@@ -167,6 +167,10 @@ border-radius: 10px;
     font-size: 40px;
     border: none;
 }
+.tophead{
+    color: white;
+    text-transform: uppercase;
+}
 #Additems{
     color: white;
     display: inline;
