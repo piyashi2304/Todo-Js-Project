@@ -7,6 +7,8 @@ var notask = document.getElementById("notask")
 var singlecard = document.getElementById("singlecard")
 var cardNameHead  = document.getElementById("task")
 var tophead = document.getElementById("tophead")
+var topheadclone = document.getElementById("topheadclone")
+
 let isSinglecard =false
 // let currentsingelcard = null
 //Add task Button
@@ -145,6 +147,7 @@ function addcard(){
         singlecard.classList.add('allign');
         cardcontainer.classList.add('hide');
         tophead.classList.remove('hide')
+        topheadclone.classList.remove('hide')
         tophead.innerText = cardHeading.innerText
         
 
@@ -258,6 +261,8 @@ function addcard(){
                        
                         itemclone.firstElementChild.style.textDecoration = "line-through";
                         markdoneClone.classList.add('hide');
+                        itemtext.style.textDecoration = "line-through";
+                        markdone.classList.add('hide');
                     });
                 }
             })
@@ -272,6 +277,7 @@ function addcard(){
 }
 function back(){
     parent.firstElementChild.classList.add('hide')
+    topheadclone.classList.add('hide')
     tophead.classList.add("hide")
     // cardNameHead.classList.add("hide")
     cardNameHead.classList.remove("hide")
